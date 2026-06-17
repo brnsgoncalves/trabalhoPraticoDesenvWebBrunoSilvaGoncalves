@@ -1,0 +1,441 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E CORES DA IMAGEM
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b2265;
+    /* Padrão Xadrez Junino Baseado na Identidade Visual da Festa */
+    background-image: 
+        linear-gradient(90deg, rgba(16, 44, 122, 0.5) 50%, transparent 50%),
+        linear-gradient(rgba(24, 78, 32, 0.4) 50%, transparent 50%);
+    background-size: 60px 60px;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================================
+   MENU VERTICAL COM DROPDOWN VERTICAL (Critério D)
+   ========================================== */
+nav {
+    background: #091942;
+    border: 3px solid #f39c12;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+/* Placa do logotipo do menu */
+nav header {
+    background-color: #7d3c16;
+    background-image: radial-gradient(circle at 10% 10%, #964b1f 1px, transparent 1px);
+    border: 2px solid #54250c;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.6), 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Estilização da tag <i> substituindo o antigo span da navbar */
+nav header i {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    font-style: normal; /* Remove o itálico padrão do elemento <i> */
+}
+
+nav header h3 {
+    font-family: 'Fredoka', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #10328c;
+    border-radius: 5px;
+    color: #f1c40f;
+}
+
+/* Menu Dropdown */
+nav ul li ul {
+    display: none;
+    background-color: #05102d;
+    padding-left: 15px;
+    border-left: 2px solid #f39c12;
+}
+
+nav ul li.dropdown:hover ul {
+    display: block;
+}
+
+/* Dados de contato/rodapé do Menu (Critério C) */
+address {
+    margin-top: 30px;
+    font-size: 11px;
+    font-style: normal;
+    color: #a0aab5;
+    padding-top: 15px;
+    border-top: 1px dashed #f39c12;
+    text-align: left;
+}
+
+address strong {
+    color: #fff;
+}
+
+address a {
+    display: inline;
+    padding: 0;
+    font-size: 11px;
+    color: #f1c40f;
+    text-transform: none;
+    font-weight: normal;
+}
+
+/* ==========================================
+   ESTRUTURA DO CARTÃO PRINCIPAL (MAIN) E LOGO
+   ========================================== */
+main {
+    background: radial-gradient(circle at center, #0e308f 0%, #061647 100%);
+    border: 8px solid #f39c12;
+    outline: 6px solid #0b2265;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 35px 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    text-align: center;
+    position: relative;
+}
+
+/* Container do logotipo principal */
+main header {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Nova regra para alinhar a imagem da fogueira anexada */
+main header img {
+    height: 70px; /* Tamanho harmonioso em relação à fonte */
+    width: auto;
+    float: left; /* Joga a fogueira para a esquerda do texto */
+    margin-top: -10px;
+    margin-left: 15px;
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.5)); /* Efeito de sombra acompanhando a fogueira */
+}
+
+/* Título em relevo 3D adaptado para dividir linha com o float */
+main header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #f39c12;
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -1px;
+    display: inline-block;
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  4px 0px #964b1f,
+         0px  8px 0px #54250c,
+         0px 12px 15px rgba(0,0,0,0.6);
+}
+
+/* Nova tag para o subtítulo amadeirado (Substituindo o antigo span) */
+main header small {
+    clear: both; /* Quebra o fluxo flutuante para se posicionar perfeitamente abaixo */
+    background: linear-gradient(180deg, #d35400 0%, #a04000 100%);
+    border: 3px solid #54250c;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 30px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+    transform: rotate(-1deg);
+}
+
+/* Força o fechamento de fluxos flutuantes do cabeçalho */
+main header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main h2, main h3 {
+    font-family: 'Fredoka', sans-serif;
+    color: #f1c40f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eaedd5;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Listas de Programação e Tabelas */
+article ul {
+    list-style: none;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px dashed #f39c12;
+    margin-bottom: 25px;
+}
+
+article ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+}
+
+article ul li strong {
+    color: #f39c12;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 15px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid #f39c12;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(180deg, #7d3c16 0%, #54250c 100%);
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 12px;
+    border-bottom: 3px solid #f39c12;
+}
+
+td {
+    padding: 12px;
+    font-size: 14px;
+    color: #eaedd5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    text-align: justify;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ilustração Semântica (Página de História) */
+figure {
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px dashed #f39c12;
+}
+
+/* Nova tag para carregar a ilustração de emojis (Substituindo o antigo span) */
+figure strong {
+    font-size: 70px;
+    display: block;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+figcaption {
+    font-size: 12px;
+    color: #f1c40f;
+    font-family: 'Fredoka', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   CAIXA ISOLADA DO ASIDE (LOCALIZAÇÃO)
+   ========================================== */
+aside.local-evento {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    background: radial-gradient(circle at center, #0e308f 0%, #061647 100%);
+    border: 5px solid #f39c12;
+    outline: 4px solid #0b2265;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+aside.local-evento h3 {
+    color: #f1c40f;
+    font-family: 'Fredoka', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+aside.local-evento p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #eaedd5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+aside.local-evento address {
+    border-top: 2px solid #7d3c16;
+    padding-top: 15px;
+    font-size: 14px;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+aside.local-evento address strong {
+    color: #f39c12;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+aside.local-evento address a {
+    display: inline-block;
+    margin-top: 12px;
+    background: linear-gradient(180deg, #7d3c16 0%, #54250c 100%);
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 20px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão padrão de navegação (Rodapé das páginas comuns) */
+main footer button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 5px 0px rgba(0,0,0,0.3);
+    background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+    color: #fff;
+    border-bottom: 4px solid #1e8449;
+}
+
+/* ==========================================
+   MEDIA QUERIES OBRIGATÓRIAS (Critério G)
+   ========================================== */
+@media (min-width: 992px) {
+    body {
+        display: block;
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    nav {
+        display: block;
+        float: left;
+        width: 220px;
+        position: sticky;
+        top: 40px;
+        margin-bottom: 0;
+    }
+
+    main {
+        float: left;
+        width: calc(100% - 560px);
+        max-width: 750px;
+        margin: 0 0 0 30px;
+        padding: 35px 40px;
+    }
+
+    aside.local-evento {
+        float: right;
+        width: 280px;
+        margin: 0;
+        padding: 25px 20px;
+    }
+
+    body::after, main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@media (max-width: 767px) {
+    body { padding: 10px; }
+    
+    /* Reposiciona a fogueira centralizada no mobile em cima do título */
+    main header img {
+        height: 55px;
+        float: none;
+        display: block;
+        margin: 0 auto 12px auto;
+    }
+    
+    main { padding: 25px 15px; border-width: 5px; outline-width: 4px; }
+    main header h1 { font-size: 36px; display: block; }
+    table { font-size: 12px; }
+    th, td { padding: 8px 4px; }
+}

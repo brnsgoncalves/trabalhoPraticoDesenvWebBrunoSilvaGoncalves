@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São João é do Brasil - Inscrição</title>
+    <link rel="icon" type="image/jpeg" href="../imagens/442537.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilo/layout.css">
+    <link rel="stylesheet" href="../estilo/layoutForm.css">
+</head>
+<body>
+
+    <nav>
+        <header>
+            <i>🪗</i>
+            <h3>Menu</h3>
+        </header>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li class="dropdown">
+                <a href="#">Informações ▾</a>
+                <ul>
+                    <li><a href="../paginas/sobre.html">História de São João</a></li>
+                    <li><a href="../paginas/cronograma.html">Cronograma</a></li>
+                </ul>
+            </li>
+            <li><a href="../paginas/formulario.html">Garanta seu ingresso</a></li>
+        </ul>
+
+        <address>
+            <strong>Bruno da Silva Gonçalves</strong><br>
+            Disciplina: Desenvolvimento Web<br>
+            IFSP Campus Boituva<br>
+            Contato: <a href="brn.sgoncalves@gmail.com"
+                style="display:inline; padding:0; font-size:11px; color:#f1c40f; text-transform:none;">brn.sgoncalves@gmail.com</a>
+        </address>
+    </nav>
+
+    <main>
+        <header>
+            <img src="../imagens/9762cb28a85ff87d94969bb4abf67e01-removebg-preview.png" alt="Fogueira de São João iluminada">
+            <h1>São João</h1>
+            <small>É do Brasil!</small>
+        </header>
+
+        <section>
+            <h2>Garantir Meu Ingresso</h2>
+            
+            <form id="cadastro-form">
+                <p>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail para Envio do Ingresso:</label>
+                    <input type="email" id="email" name="email" placeholder="nome@provedor.com" required>
+                </p>
+
+                <p>
+                    <label for="telefone">Telefone de Contato:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </p>
+
+                <p>
+                    <label for="idade">Idade do Titular:</label>
+                    <input type="number" id="idade" name="idade" min="0" max="120" placeholder="Ex: 18" required>
+                </p>
+
+                <p>
+                    <label for="tipo-ingresso">Tipo de Ingresso:</label>
+                    <select id="tipo-ingresso" name="tipo-ingresso">
+                        <option value="Comunidade Externa (Inteira)">Comunidade Externa (Inteira)</option>
+                        <option value="Estudante IFSP / Escola Pública (Meia)">Estudante IFSP / Escola Pública (Meia)</option>
+                        <option value="Professor / Funcionário">Professor / Funcionário</option>
+                        <option value="Criança até 10 anos (Isento)">Criança até 10 anos (Isento)</option>
+                    </select>
+                </p>
+
+                <footer>
+                    <button type="submit">Emitir Ingresso</button>
+                    <button type="reset" id="btn-limpar">Limpar</button>
+                </footer>
+            </form>
+        </section>
+
+        <aside id="resultado-exibicao" style="display: none;">
+            <h3>Prévia do Seu Ingresso! 🎟️</h3>
+            <p><strong>Titular:</strong> <output id="out-nome"></output></p>
+            <p><strong>E-mail cadastrado:</strong> <output id="out-email"></output></p>
+            <p><strong>Contato:</strong> <output id="out-telefone"></output></p>
+            <p><strong>Idade registrada:</strong> <output id="out-idade"></output> anos</p>
+            <p><strong>Categoria:</strong> <output id="out-ingresso"></output></p>
+            
+            <footer>
+                <button type="button" id="btn-confirmar-final">Confirmar e Gerar Entrada! 🔥</button>
+            </footer>
+        </aside>
+    </main>
+    <script src="../javascript/script.js"></script>
+</body>    
